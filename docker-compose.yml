@@ -1,0 +1,14 @@
+services:
+  playwright:
+    image: pw-compare:1.56.0
+    build: .
+    container_name: playwright-diff
+    working_dir: /app
+    volumes:
+      - ./tests:/app/tests
+      - ./playwright-report:/app/playwright-report
+      - ./test-results:/app/test-results
+    environment:
+      - CI=1
+    command: npx playwright test --reporter=html
+
