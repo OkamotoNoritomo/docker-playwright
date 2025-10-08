@@ -27,6 +27,10 @@ export default defineConfig({
       name: 'staging',
       use: { baseURL: 'http://staging.spaia.jp/basketball/bleague/' },
     },
+    {
+      name: 'b1',
+      use: { baseURL: 'https://spaia.jp/basketball/bleague/b1' },
+    },
   ],
 });
 

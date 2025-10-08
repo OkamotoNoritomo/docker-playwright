@@ -9,8 +9,6 @@ RUN npm ci
 
 COPY . .
 
-ENV CI=1
-
 # 既定はHTMLレポート付きで実行
 CMD ["npx", "playwright", "test", "--reporter=html"]
 
